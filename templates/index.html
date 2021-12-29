@@ -7,53 +7,69 @@
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="static\css\style.css">
-    <link rel="icon" href="static\css\icon.ico">
-    <title>Automatic ML</title>
-    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="..\static\css\style.css">
+    <link rel="icon" href="..\static\icon.ico">       
+    <title>ML Assistant</title> 
+
+
 </head>
+
 <body>
     <br>
-    <img src="static\css\icon.png" align=left class='icon'>
-    <h1 class='heading'>ML Renderer</h1>
+    <div class="header">
+    <img src="..\static\icon.png"  class='icon'>
+    <h1 class='heading'>Assistant</h1>
+
     <br>
+    </div>
+    
     <hr class='divider'>
     <br>
-    <p class='desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ratione nisi, officiis porro reiciendis eius ipsa quia ad nobis fugiat nihil explicabo dolor aspernatur libero dolore dolorem harum quo quibusdam? Provident fugiat sint mollitia aspernatur deserunt dolor ad neque, laudantium maxime distinctio delectus sed praesentium obcaecati omnis quibusdam magni rem.
-    </p>
+    <div class="desc">
+        <p>
+            <h2>One stop solution from training to integration.</h2>
+        <h3>You can now just add your dataset and get pre-trained model with the code.</h3>
+        Even if you don't know to write a single line of code, you can get machine learning code rendered following just a few steps.
+        <br>
+        <ul>
+            <li>
+                <h4>Step 1: <b>Upload your dataset in CSV format on this page and click on submit. You will be redirected to a new page.</b></h4>   
+            </li>
+            
+        </ul>
+        </p>
+    </div>
 
     <form action="" method="post" enctype="multipart/form-data">
-    <div>
-        <div class="inputs">
-            <ol class=list>
-                <li><input type="file" name="csvfile"></li>
-                <li><input type="text" name="target" placeholder="Enter the target variable" required="required" /></li>
-            </ol>
-        </div>
-        <br>
-        <div class="inputs">
-            <ol start=3 class='list'>
-                <li><select name="type" id="type">
-                    <option value="regression">Regression</option>
-                    <option value="classification">Classification</option>
-                    </select></li>
-                <li>
+        <div class='main'>
+            <div class="inputs">
+                    <div class="number">
+                        1
+                    </div>
+                    <input type="file" name="csvfile" class="input" required="required">
+            </div>
+            <div class="inputs">
                 <input type="submit" value="Submit" class="submit">
-                </li>
-            </ol>
+            </div>
         </div>
-    </div>
-    </form>
-<br>
-<br>
-<br>
-    <div class="container">
-        {{ prediction_text }}
+     </form>
+    
+     <!--Make a try now button which loads a csv-->
+     <div class="container">
+        <h3>Try now, Download CSV and train your first model now!</h3>
+        <a href="/return-csv/" download><button class='sample'>Download Sample CSV</button></a>
+        <a href="/documentation/"><button class='documentation'>Documentation</button></a>        
         <br>
-        <a href="/return-files/" download><button class='down'>Download</button></a>
+        <p>Note: Create a new folder and save the dataset in the same.</p>
     </div>
-    </div>
+    
+    <footer class="footer" id="index_footer">
+        <p>Made with &#10084; by <a href="https://vinnovateit.com/" id="footerlink">VinnovateIT</a></p>
+    </footer>
+
+    
+    
 </body>
 </html>
